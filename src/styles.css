@@ -1,0 +1,277 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+  }
+  
+  .container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+  }
+  
+  /* Side Panel Styles */
+  .side-panel {
+    width: 250px;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+  }
+  
+  .side-panel h2 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    text-align: center;
+    border-bottom: 1px solid #444;
+    padding-bottom: 10px;
+  }
+  
+  .todo-lists {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .todo-lists li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #464646;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .todo-lists li a {
+    color: white;
+    text-decoration: none;
+    flex-grow: 1;
+    font-size: 1.1rem;
+  }
+  
+  .todo-lists li a:hover {
+    text-decoration: underline;
+  }
+  
+  .todo-lists li:hover {
+    background-color: #555;
+  }
+
+  li:has(> a.active) {
+    /* Styles for the <li> that contains an <a> with the class "active" */
+    background-color: #5879d3;
+  }
+  
+  .todo-lists li .list-icon {
+    margin-right: 10px;
+    font-size: 1.2rem;
+    color: #bbb;
+  }
+  
+  .todo-lists li:hover .list-icon {
+    color: #fff;
+  }
+  
+  /* Main Content Styles */
+  .main-content {
+    flex-grow: 1;
+    padding: 20px;
+  }
+  
+  .header {
+    text-align: right;
+  }
+  
+  .logout-btn {
+    background-color: #ff4d4d;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .logout-btn:hover {
+    background-color: #e60000;
+  }
+  
+  .incomplete-tasks, .completed-tasks {
+    margin-top: 20px;
+  }
+  
+  h2 {
+    margin-bottom: 10px;
+  }
+  
+  ul {
+    list-style: none;
+    margin-bottom: 20px;
+  }
+  
+  ul li {
+    background-color: #eee;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  ul li .task-name {
+    flex-grow: 1;
+  }
+  
+  ul li.completed {
+    text-decoration: line-through;
+    color: gray;
+  }
+  
+  .task-icons {
+    display: flex;
+  }
+  
+  .task-icons button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    margin-left: 10px;
+    padding: 5px;
+    border-radius: 5px;
+  }
+  
+  .task-icons button.complete-btn {
+    color: green;
+  }
+  
+  .task-icons button.complete-btn:hover {
+    background-color: #d4f4d4;
+  }
+  
+  .task-icons button.delete-btn {
+    color: red;
+  }
+  
+  .task-icons button.delete-btn:hover {
+    background-color: #f4d4d4;
+  }
+  
+  .add-task {
+    display: flex;
+    margin-top: 10px;
+  }
+  
+  .add-task input {
+    flex-grow: 1;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .add-task button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .add-task button:hover {
+    background-color: #218838;
+  }
+  
+  /* Login/Register Form Styles */
+  .form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    padding: 20px;
+    background-color: #eee;
+    border-radius: 10px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input {
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .submit-btn {
+    background-color: #28a745;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .submit-btn:hover {
+    background-color: #218838;
+  }
+  
+  .form-footer {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .form-footer a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .form-footer a:hover {
+    text-decoration: underline;
+  }
+
+  /* Empty state styling */
+.empty-state {
+    font-style: italic;
+    color: gray;
+    padding: 10px;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    margin: 10px 0;
+  }
+
+  /* Greeting Message Styling */
+.greeting-message {
+    text-align: center;
+    padding: 50px 20px;
+    border-radius: 10px;
+  }
+  
+  .greeting-message h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .greeting-message p {
+    font-size: 1.2rem;
+    color: #666;
+  }

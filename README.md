@@ -1,0 +1,1 @@
+This project is a Todo List application developed during the VEGA IT React workshop using React and typescript on the front end.

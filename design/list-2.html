@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <aside class="side-panel">
+      <h2>To-Do Lists</h2>
+      <ul class="todo-lists">
+        <li><a href="./list-1.html">Default</a><span>(2)</span></li>
+        <li><a class="active" href="./list-2.html">Shopping list</a><span>(1)</span></li>
+      </ul>
+    </aside>
+    
+    <main class="main-content">
+      <div class="header">
+        <button class="logout-btn">Logout</button>
+      </div>
+
+      <section class="incomplete-tasks">
+        <h2>Incomplete Tasks</h2>
+        <ul>
+          <li>
+            <span class="task-name">Task 1</span>
+            <span class="task-icons">
+              <button class="complete-btn">&#x2713;</button> <!-- Checkmark icon -->
+              <button class="delete-btn">&#x1F5D1;</button> <!-- Trashcan icon -->
+            </span>
+          </li>
+        </ul>
+        <div class="add-task">
+          <input type="text" placeholder="New task">
+          <button>Add Task</button>
+        </div>
+      </section>
+
+      <section class="completed-tasks">
+        <h2>Completed Tasks</h2>        
+        <ul class="task-list">
+          <!-- Example tasks (can be removed) -->
+          <!-- If no tasks exist, the empty state below will be visible -->
+          <!-- <li>
+            <span class="task-name completed">Task 3</span>
+            <span class="task-icons">
+              <button class="complete-btn">&#x21A9;</button>
+              <button class="delete-btn">&#x1F5D1;</button>
+            </span>
+          </li> -->
+        </ul>
+        <div class="empty-state" id="completed-empty-state">
+          No tasks
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
